@@ -1,0 +1,198 @@
+ <!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<title>MyFlix - 영화 상세</title>
+<style>
+
+  body{
+    margin:0;
+    font-family:"Noto Sans KR","Apple SD Gothic Neo",sans-serif;
+    background:#111111;  
+    color:#e5e5e5;
+  }
+  .wrap{ width:980px; margin:24px auto; padding:0 12px; }
+
+
+  .header{ background:#111111; padding:10px 12px; overflow:auto; }
+  .logo{ float:left; }
+  .logo img{ width:100px; height:auto; display:block; }
+  .menu{ float:right; }
+  .menu a{
+    display:inline-block; color:#e5e5e5; text-decoration:none;
+    padding:6px 10px; margin-left:8px;
+  }
+  .menu a.active{ color:#E50914; }
+
+
+  .topline{ text-align:center; margin:18px 0 8px; color:#cfcfcf; }
+  .dots{ margin-top:8px; }
+  .dot{
+    display:inline-block; width:8px; height:8px; background:#6f6f6f;
+    margin:0 4px;
+  }
+  .dot.dark{ background:#2e2e2e; }
+
+
+.side-arrow { 
+  position: fixed;              
+  top: 50%;                    
+  transform: translateY(-50%);
+  width: 36px;
+  height: 36px;
+  border: none;
+  background: none;
+  color: #ffffff;
+  font-size: 28px;
+  line-height: 36px;
+  text-align: center;
+  cursor: pointer;
+  z-index: 999;                 
+}
+
+
+.side-arrow.left  { left: 40px; }
+.side-arrow.right { right: 40px; }
+
+  .detail{ overflow:auto; }
+  .poster{
+    float:left; width:360px; height:480px;
+    text-align:center; line-height:480px; color:#9a9a9a;
+  }
+  .poster img{ width:100%; height:100%; object-fit:cover; display:block; }
+
+  .meta{ float:right; width:560px; min-height:480px; }
+
+  .title{
+    background:none;
+    color:#ffffff;
+    padding:0;
+    margin:0 0 8px;
+    font-weight:600;
+    font-size:18px;
+  }
+
+  .fav-box{
+    background:none;
+    color:#d0d0d0;
+    padding:0;
+    margin:8px 0 12px;
+    font-size:14px;
+    line-height:1.7;
+  }
+
+  .rating-row{
+    margin-top:12px; color:#fff;
+    display:inline-block; padding:10px 12px;
+  }
+  .stars{ color:#ffcc00; margin-right:6px; }
+
+  .trailers{
+    margin-top:28px;
+    text-align:center;
+  }
+
+ 
+  .thumb{
+    display:inline-block;
+    width:250px;
+    height:140px;
+    margin:0 10px 10px;
+    background:#000;
+    overflow:hidden;
+    vertical-align:middle;
+  }
+
+
+  .thumb video{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+    border:none;
+  }
+
+  
+  .footer{ color:#9c9c9c; text-align:center; padding:28px 0 36px; }
+</style>
+</head>
+<body>
+
+
+<div class="header">
+  <div class="logo"><img src="myflix.png" alt="MYFLIX 로고"></div>
+  <div class="menu">
+    <a href="메인.html">홈</a>
+    <a href="영화.html" class="active">영화</a>
+    <a href="장르.html">장르</a>
+    <a href="추천.html">추천</a>
+      <a href="개봉 예정.html">개봉 예정작</a> 
+    <a href="신규.html">신규</a>
+  </div>
+</div>
+
+<div class="wrap">
+
+  <div class="topline">
+    MOVIE
+    <div class="dots">
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot dark"></span>
+    </div>
+  </div>
+
+ 
+  <div class="stage">
+    <button class="side-arrow left" onclick="location.href='영화3.html'">‹</button>
+<button class="side-arrow right" onclick="location.href='영화4.html'">›</button>
+
+    <div class="detail">
+      <div class="poster">
+        <img src="라라랜드.png" alt="영화 포스터">
+      </div>
+
+      <div class="meta">
+        <div class="title">라라랜드</div>
+
+        <div class="fav-box">
+          <p>영화 〈F1: 더 무비〉는 한때 전설적인 레이서였던 써니 헤이즈가 몰락한 F1 팀 APXGP를 위해 다시 트랙으로
+             돌아오면서 벌어지는 이야기를 그린다.</p> 
+             <p>그는 젊고 재능 넘치는 신예 드라이버 조슈아 피어스와 한 팀이 되어 경쟁과 협력을 오가며 치열한 시즌을 치른다.</p>    
+          <p>두 사람은 서로의 한계와 두려움, 과거의 상처를 마주하며 진정한 레이서로 성장해 간다.</p>  
+          <p>마지막 레이스에서 써니는 팀과 자신을 위해 인생 최고의 결단을 내리며, “속도보다 중요한 건 용기”임을 깨닫는다.</p>
+        </div>
+
+        <div class="rating-row">
+          평점 5.0 <span class="stars"> ★★★★★</span>
+        </div>
+
+      
+        <div class="trailers">
+          <div class="thumb">
+            <video controls>
+              <source src="ra1.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="thumb">
+            <video controls>
+              <source src="ra2.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="thumb">
+            <video controls>
+              <source src="ra3.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">© 2025 MyFlix</div>
+</div>
+
+</body>
+</html>

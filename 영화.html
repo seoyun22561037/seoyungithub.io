@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<title>MyFlix - 영화 상세</title>
+<style>
+  /* ===== 공통 ===== */
+  body{
+    margin:0;
+    font-family:"Noto Sans KR","Apple SD Gothic Neo",sans-serif;
+    background:#111111;  
+    color:#e5e5e5;
+  }
+  .wrap{ width:980px; margin:24px auto; padding:0 12px; }
+
+  /* ===== 헤더 ===== */
+  .header{ background:#111111; padding:10px 12px; overflow:auto; }
+  .logo{ float:left; }
+  .logo img{ width:100px; height:auto; display:block; }
+  .menu{ float:right; }
+  .menu a{
+    display:inline-block; color:#e5e5e5; text-decoration:none;
+    padding:6px 10px; margin-left:8px;
+  }
+  .menu a.active{ color:#E50914; }
+
+  /* ===== 상단 MOVIE & 인디케이터 ===== */
+  .topline{ text-align:center; margin:18px 0 8px; color:#cfcfcf; }
+  .dots{ margin-top:8px; }
+  .dot{
+    display:inline-block; width:8px; height:8px; background:#6f6f6f;
+    margin:0 4px;
+  }
+  .dot.dark{ background:#2e2e2e; }
+
+/* ===== 화살표 ===== */
+.side-arrow { 
+  position: fixed;              /* ← absolute → fixed 로 변경 */
+  top: 50%;                     /* 화면 세로 중앙에 고정 */
+  transform: translateY(-50%);
+  width: 36px;
+  height: 36px;
+  border: none;
+  background: none;
+  color: #ffffff;
+  font-size: 28px;
+  line-height: 36px;
+  text-align: center;
+  cursor: pointer;
+  z-index: 999;                 /* 다른 요소보다 위에 표시 */
+}
+
+/* 좌우 위치 */
+.side-arrow.left  { left: 40px; }
+.side-arrow.right { right: 40px; }
+
+  /* ===== 상세 레이아웃 ===== */
+  .detail{ overflow:auto; }
+  .poster{
+    float:left; width:360px; height:480px;
+    text-align:center; line-height:480px; color:#9a9a9a;
+  }
+  .poster img{ width:100%; height:100%; object-fit:cover; display:block; }
+
+  .meta{ float:right; width:560px; min-height:480px; }
+
+  .title{
+    background:none;
+    color:#ffffff;
+    padding:0;
+    margin:0 0 8px;
+    font-weight:600;
+    font-size:18px;
+  }
+
+  .fav-box{
+    background:none;
+    color:#d0d0d0;
+    padding:0;
+    margin:8px 0 12px;
+    font-size:14px;
+    line-height:1.7;
+  }
+
+  .rating-row{
+    margin-top:12px; color:#fff;
+    display:inline-block; padding:10px 12px;
+  }
+  .stars{ color:#ffcc00; margin-right:6px; }
+
+  /* ===== 예고편 3칸 ===== */
+  .trailers{
+    margin-top:28px;
+    text-align:center;
+  }
+
+  /* 썸네일 통일 */
+  .thumb{
+    display:inline-block;
+    width:250px;
+    height:140px;
+    margin:0 10px 10px;
+    background:#000;
+    overflow:hidden;
+    vertical-align:middle;
+  }
+
+  /* 영상 정렬 */
+  .thumb video{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+    border:none;
+  }
+
+  /* ===== 하단 ===== */
+  .footer{ color:#9c9c9c; text-align:center; padding:28px 0 36px; }
+</style>
+</head>
+<body>
+
+<!-- 헤더 -->
+<div class="header">
+  <div class="logo"><img src="myflix.png" alt="MYFLIX 로고"></div>
+  <div class="menu">
+    <a href="메인.html">홈</a>
+    <a href="영화.html" class="active">영화</a>
+    <a href="장르.html">장르</a>
+    <a href="추천.html">추천</a>
+      <a href="개봉 예정.html">개봉 예정작</a> 
+    <a href="신규.html">신규</a>
+  </div>
+</div>
+
+<div class="wrap">
+  <!-- MOVIE + 인디케이터 -->
+  <div class="topline">
+    MOVIE
+    <div class="dots">
+      <span class="dot dark"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+    </div>
+  </div>
+
+  <!-- 화살표 + 상세 묶음 -->
+  <div class="stage">
+ <button class="side-arrow left" onclick="location.href='영화1.html'">‹</button>
+<button class="side-arrow right" onclick="location.href='영화1.html'">›</button>
+
+    <div class="detail">
+      <div class="poster">
+        <img src="상견니.png" alt="영화 포스터">
+      </div>
+
+      <div class="meta">
+        <div class="title">상견니</div>
+
+        <div class="fav-box">
+          <p>영화 〈상견니〉는 사랑하는 연인을 잃은 ‘황위쉰’이 과거로 시간 여행을 하며 벌어지는 이야기를 그린다.</p>  
+          <p>우연히 듣게 된 카세트테이프를 통해 1998년으로 돌아간 그는, 죽은 연인과 똑같이 생긴 소녀 ‘천윈루’를 만나게 된다.</p>    
+          <p>시간과 인연이 얽히며 서로의 진심과 비밀이 드러나고, 두 사람은 운명을 바꾸기 위해 고군분투한다.</p>  
+        </div>
+
+        <div class="rating-row">
+          평점 4.5 <span class="stars"> ★★★★☆</span>
+        </div>
+
+      
+        <div class="trailers">
+          <div class="thumb">
+            <video controls>
+              <source src="상1.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="thumb">
+            <video controls>
+              <source src="상2.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="thumb">
+            <video controls>
+              <source src="상3.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">© 2025 MyFlix</div>
+</div>
+
+</body>
+</html>

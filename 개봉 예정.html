@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>MyFlix - 신규 영화</title>
+<style>
+  :root{
+    --bg:#111111;
+    --text:#e5e5e5;
+    --muted:#bdbdbd;
+    --red:#E50914;
+    --panel:#1a1a1a;
+    --panel2:#222;
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--text);
+    font-family:"Noto Sans KR","Apple SD Gothic Neo",sans-serif;
+  }
+  .header{
+    padding:12px 16px;
+    border-bottom:1px solid #1f1f1f;
+  }
+  .logo{float:left}
+  .logo img{width:100px; height:auto; display:block}
+  .menu{float:right}
+  .menu a{
+    display:inline-block;
+    color:var(--text);
+    text-decoration:none;
+    padding:6px 10px;
+    margin-left:8px;
+  }
+  .menu a.active{color:var(--red)}
+  .wrap{max-width:980px; margin:28px auto; padding:0 16px}
+  .title{
+    text-align:center;
+    font-size:22px;
+    font-weight:700;
+    margin:10px 0 26px;
+  }
+
+  .row{
+    display:flex;
+    justify-content:center;
+    align-items:flex-start;
+    gap:28px;
+  }
+
+  .card{
+    width:240px;
+    height:340px;
+    background:var(--panel2);
+    border:1px solid #2a2a2a;
+    overflow:hidden;
+  }
+  .card img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+  }
+  .card a{display:block; width:100%; height:100%}
+
+  .footer{
+    color:var(--muted);
+    text-align:center;
+    padding:28px 0 38px;
+  }
+
+  @media (max-width:640px){
+    .row{flex-direction:column; align-items:center}
+    .card{width:88vw; max-width:360px; height:52vw; max-height:520px}
+  }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div class="logo"><img src="myflix.png" alt="MYFLIX"></div>
+  <div class="menu">
+    <a href="메인.html">홈</a>
+    <a href="영화.html">영화</a>
+    <a href="장르.html">장르</a>
+    <a href="추천.html">추천</a>
+    <a href="개봉 예정.html"class="active">개봉 예정작</a>
+    <a href="신규.html" >신규</a>
+   
+  </div>
+  <div style="clear:both"></div>
+</div>
+
+<div class="wrap">
+  <div class="title">신규 영화</div>
+
+  <div class="row">
+    <div class="card">
+      <a href="영화1.html">
+        <!-- 실제 포스터로 교체 -->
+        <img src="개.png" alt="신규 영화 1">
+      </a>
+    </div>
+
+    <div class="card">
+      <a href="영화2.html">
+        <!-- 실제 포스터로 교체 -->
+        <img src="개2.png" alt="신규 영화 2">
+      </a>
+    </div>
+  </div>
+
+  <div class="footer">© 2025 MyFlix</div>
+</div>
+
+</body>
+</html>
